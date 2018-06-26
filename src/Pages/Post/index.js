@@ -1,11 +1,20 @@
 import React from 'react'
 
-const Post = ({ post: { title, description, id }, onDeletePost }) => (
-  <div className="card p-4">
+const styles = {
+  borderBottom: '2px solid #eee',
+  background: '#f5f5f5',
+  margin: '.75rem auto',
+  padding: '.6rem 1rem',
+  maxWidth: '500px',
+  borderRadius: '7px'
+}
+
+const Post = ({ post: { title, body, _id }, onDeletePost }) => (
+  <div style={styles}>
     <h2>{title}</h2>
-    <p>{description}</p>
-    <button className="btn btn-danger" onClick={() => onDeletePost(id)}>
-      DELETE
+    <p>{body}</p>
+    <button className="btn btn-danger" onClick={() => onDeletePost(_id)}>
+      Remove
     </button>
   </div>
 )

@@ -1,13 +1,13 @@
-import { ADD_POST, DELETE_POST } from '../Utils/types'
+import { ADD_POST, DELETE_POST, FETCH_POST } from '../Utils/types'
 
 export default function postReducer(state = [], action) {
   switch (action.type) {
     case ADD_POST:
       return [...state, action.payload]
     case DELETE_POST:
-      console.log(action.payload.id)
-      console.log(state)
-      return state.filter(post => post.id !== action.payload.id)
+      return state.filter(post => post._id !== action.payload.id)
+    case FETCH_POST:
+      return action.posts
     default:
       return state
   }

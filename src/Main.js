@@ -13,7 +13,7 @@ class Main extends Component {
           <div className="col-sm-5">
             <NewPost />
           </div>
-          <div className="col-sm-5 offset-sm-2">
+          <div className="col-sm-6 offset-sm-1">
             <PostList />
           </div>
         </div>

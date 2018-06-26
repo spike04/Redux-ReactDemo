@@ -7,7 +7,11 @@ import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './Reducers/rootReducers'
 
+import { fetchAllPosts } from './Actions/index'
+
 import Main from './Main'
+
+store.dispatch(fetchAllPosts())
 
 ReactDOM.render(
   <Provider store={store}>

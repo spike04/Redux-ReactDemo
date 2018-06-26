@@ -9,7 +9,7 @@ const PostList = ({ posts, onDeletePost }) => (
     <h2>Post List</h2>
     <hr />
     {posts.map((post, i) => {
-      return <Post key={post.id} post={post} onDeletePost={onDeletePost} />
+      return <Post key={post._id} post={post} onDeletePost={onDeletePost} />
     })}
   </div>
 )

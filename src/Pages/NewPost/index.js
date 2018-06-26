@@ -5,7 +5,7 @@ import { createPost } from '../../Actions/index'
 class NewPost extends Component {
   state = {
     title: '',
-    description: ''
+    body: ''
   }
 
   handleInput = e => {
@@ -37,10 +37,10 @@ class NewPost extends Component {
           cols="19"
           rows="8"
           className="form-control"
-          name="description"
+          name="body"
           placeholder="Enter Post Description"
           onChange={this.handleInput}
-          value={this.state.description}
+          value={this.state.body}
         />
         <button className="btn btn-primary mt-2" onClick={this.addPost}>
           Add Post
